@@ -1,8 +1,10 @@
 #pragma once
 #include "Model.h"
 #include "Texture.h"
+#include <vector>
 
 #define RESOURCE_MANAGER_FILE_PATH "../Resources/RM.txt"
+#define RESOURCE_LENGTH 100
 
 class ResourceManager
 {
@@ -27,11 +29,9 @@ public:
 		}
 	}
 	void LoadResource();
-	void AddModel(Model *model);
-	void AddTexture(Texture *texture);
 private:
 	static ResourceManager * ms_pInstance;
 	GLuint m_numberModel, m_numberTexture, m_id;
-	Model **m_model;
-	Texture **m_texture;
+	vector<Model *> m_modelList;
+	vector<Texture *> m_textureList;
 };
