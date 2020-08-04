@@ -1,0 +1,9 @@
+*.pdb
+*.exe
+*.tlog
+*.obj
+*.log
+*.idb
+*.filters
+*.db
+*.opendb
